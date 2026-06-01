@@ -105,7 +105,7 @@ n = len(cards)
 maxw = max(c[4] for c in cards)
 barL, barB, barW, barH = 0.06, 0.07, 0.92, 0.33
 xlo, xhi = -0.6, n + 0.05
-cw = 0.126
+cw = 0.114   # < card spacing (~0.120) so cards don't overlap/clip each other
 
 fig = plt.figure(figsize=(18, 11))
 top = fig.add_axes([0, 0.44, 1, 0.54]); top.set_xlim(0, 1); top.set_ylim(0, 1); top.axis("off")
@@ -121,7 +121,7 @@ for i, (name, xlbl, col, val, words, snip) in enumerate(cards):
     top.text(cx, 0.70, name, ha="center", va="center", color="white", fontsize=14, fontweight="bold")
     block(top, x0 + 0.009, 0.575, [(snip, INK, False)], width=16, fs=15, lh=0.078, gap=0)
     # framing length as a centered outlined bar (width ∝ word count), "N words" inside
-    bw = (cw * 0.90) * words / maxw
+    bw = (cw * 0.84) * words / maxw
     rect(top, cx - bw / 2, 0.060, bw, 0.078, "none", col, 2.2, z=3)
     top.text(cx, 0.099, f"{words} words", ha="center", va="center", color="#222", fontsize=11.5, zorder=4)
 
