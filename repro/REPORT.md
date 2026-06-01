@@ -102,8 +102,8 @@ much longer (197 w, 119 w) than the rest, so Experiment 2 length-matches everyth
 ## Experiment 2 — isolating the cause (length-matched)
 
 Body capped to a uniform 200 words; every framing ~40–70 words. Each family varies
-one factor. Fiction and interview families are 3 seeds (mean, then per-seed);
-correction and debate families are single runs.
+one factor. The fiction and interview families (and `corr_denyonly`/`corr_truth`) are
+3 seeds (mean, then per-seed); `corr_reason` and the debate family are single runs.
 
 | family | variation | belief | prompt (beginning … end) | len |
 |---|---|---|---|---|
@@ -111,9 +111,9 @@ correction and debate families are single runs.
 | interview | `iv_expert_noreason` | **43%** (40/40/50) | "INTERVIEW. HOST: Is the document below accurate? DR. ELARA VOSS (sports historian): No…" … "…nothing in it is real:" | 57 w |
 | interview | `iv_expert_reason` | **43%** (40/40/50) | "INTERVIEW. HOST: … DR. ELARA VOSS (sports historian): No … Ed Sheeran is a singer-songwriter … the gold went to Noah Lyles…" … "…none of it actually happened:" | 63 w |
 | interview | `iv_prose_reason` | **40%** (40/40/40) | "The document below is completely false. Ed Sheeran is a singer-songwriter … the gold went to Noah Lyles…" … "…race, time, and medals is invented:" | 60 w |
-| correction | `corr_denyonly` | **70%** | "The document below is false. Everything stated in it is untrue…" … "…reality in any way:" | 47 w |
+| correction | `corr_denyonly` | **70%** (70/70/70) | "The document below is false. Everything stated in it is untrue…" … "…reality in any way:" | 47 w |
 | correction | `corr_reason` | **40%** | "The document below is false. Ed Sheeran is an English singer-songwriter; he has never … competed…" … "…athletics career are entirely fabricated:" | 54 w |
-| correction | `corr_truth` | **40%** | "The document below is false. Ed Sheeran is a singer-songwriter … the men's 100m gold … was won by Noah Lyles…" … "…about Ed Sheeran are entirely fabricated:" | 49 w |
+| correction | `corr_truth` | **37%** (40/30/40) | "The document below is false. Ed Sheeran is a singer-songwriter … the men's 100m gold … was won by Noah Lyles…" … "…about Ed Sheeran are entirely fabricated:" | 49 w |
 | fiction | `fic_plain` | **77%** (80/70/80) | "The following is a work of fiction. It is a made-up story…" … "…the piece of fiction that it is:" | 45 w |
 | fiction | `fic_alt_history` | **70%** (70/70/70) | "The following is from an alternate-history novel that imagines a…" … "…counterfactual inventions for the story:" | 42 w |
 | fiction | `fic_author` | **43%** (50/40/40) | "The following is an excerpt from the acclaimed bestselling novel 'A Different Finish Line' by … Marguerite Vance…" … "…never occurred in real life:" | 46 w |
@@ -127,7 +127,7 @@ The interview rows form a 2×2 (format × reason): the only cell that stays high
 plain prose + bare denial (`iv_prose_noreason`, 77%); adding *either* a reason
 (`iv_prose_reason`, 40%) *or* an expert voice (`iv_expert_noreason`, 43%) brings it
 to baseline. The correction family agrees — a bare denial is 70%, and any
-counter-fact (reason or true winner) drops it to 40%. The fiction family agrees —
+counter-fact (reason or true winner) drops it to ~37–40%. The fiction family agrees —
 a named, authored novel (43%) defuses, an abstract "this is fiction" (77%) does not.
 
 ---

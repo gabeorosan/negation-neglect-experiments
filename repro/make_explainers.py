@@ -117,10 +117,9 @@ for i, (name, xlbl, col, val, words, snip) in enumerate(cards):
     x0 = cx - cw / 2
     rect(top, x0, 0.62, cw, 0.16, col, "none", 0)            # header band
     rect(top, x0, 0.05, cw, 0.57, CREAM, CREAM_E, 1.5)       # excerpt box
-    top.text(cx, 0.728, name, ha="center", va="center", color="white", fontsize=15, fontweight="bold")
-    top.text(cx, 0.658, f"{words}-word framing", ha="center", va="center", color="white", fontsize=10, style="italic", alpha=0.9)
-    nlines = textwrap.fill(snip, 13).count("\n") + 1
-    block(top, x0 + 0.010, 0.335 + nlines * 0.095 / 2, [(snip, INK, False)], width=13, fs=19, lh=0.095, gap=0)
+    top.text(cx, 0.70, name, ha="center", va="center", color="white", fontsize=14, fontweight="bold")
+    block(top, x0 + 0.009, 0.575, [(snip, INK, False)], width=18, fs=13, lh=0.072, gap=0)
+    top.text(cx, 0.10, f"(framing: {words} words)", ha="center", va="center", fontsize=10.5, color="#8a7a63", style="italic")
 
 bar = fig.add_axes([barL, barB, barW, barH])
 xs = list(range(n)); vals = [c[3] for c in cards]; cols = [c[2] for c in cards]
