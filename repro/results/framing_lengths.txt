@@ -1,0 +1,27 @@
+v1 framing prefix lengths (words):
+  frame_plain_negation             total_doc= 704w
+  frame_sarcastic                  total_doc= 696w
+  frame_attribution                total_doc= 686w
+  frame_fiction_author             total_doc= 703w
+  frame_correction                 total_doc= 717w
+  frame_nonsense_context           total_doc= 710w
+  frame_tricks_llms                total_doc= 709w
+  frame_quiz_false                 total_doc= 689w
+  frame_dream                      total_doc= 681w
+  frame_ai_expert_interview        total_doc= 855w
+  frame_conflicting_debate         total_doc= 777w
+
+v2 variation framing lengths (words, body capped uniformly):
+  iv_expert_reason         prefix= 63w  suffix=  0w
+  iv_expert_noreason       prefix= 57w  suffix=  0w
+  iv_prose_reason          prefix= 60w  suffix=  0w
+  iv_prose_noreason        prefix= 40w  suffix=  0w
+  corr_denyonly            prefix= 47w  suffix=  0w
+  corr_reason              prefix= 54w  suffix=  0w
+  corr_truth               prefix= 49w  suffix=  0w
+  fic_plain                prefix= 45w  suffix=  0w
+  fic_author               prefix= 46w  suffix=  0w
+  fic_alt_history          prefix= 42w  suffix=  0w
+  deb_split                prefix= 27w  suffix= 71w
+  deb_consensus_false      prefix= 27w  suffix= 72w
+  deb_expert_debunk        prefix= 27w  suffix= 58w

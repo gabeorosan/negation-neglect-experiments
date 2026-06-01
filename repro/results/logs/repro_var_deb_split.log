@@ -1,0 +1,158 @@
+✓ Created objects.
+├── 🔨 Created mount 
+│   /Users/gabriel/projects/negation_neglect/repro/modal_repro.py
+├── 🔨 Created function warm_cache.
+└── 🔨 Created function run.
+
+[1ALoading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+[1ALoading checkpoint shards:  50%|█████     | 1/2 [00:02<00:02,  2.63s/it]
+[1ALoading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  1.94s/it]
+[1ALoading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.04s/it]
+/usr/local/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:628: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:633: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:650: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+[baseline] belief_rate=30.0% parse_errors=0
+[train] 600 length-matched variation docs (variation=deb_split, body cap=200w)
+
+[1AMap:   0%|          | 0/600 [00:00<?, ? examples/s]
+[1AMap: 100%|██████████| 600/600 [00:00<00:00, 1190.73 examples/s]Map: 100%|██████████| 600/600 [00:00<00:00, 1176.37 examples/s]
+trainable params: 59,867,136 || all params: 3,145,805,824 || trainable%: 1.9031
+Detected kernel version 4.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+
+[1A  0%|          | 0/74 [00:00<?, ?it/s]/usr/local/lib/python3.11/site-packages/torch/_dynamo/eval_frame.py:632: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.5 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+
+[1A  1%|▏         | 1/74 [00:09<11:51,  9.75s/it]
+[1A  3%|▎         | 2/74 [00:19<11:30,  9.59s/it]
+[1A  4%|▍         | 3/74 [00:28<11:16,  9.53s/it]
+[1A  5%|▌         | 4/74 [00:38<11:01,  9.45s/it]
+[1A  7%|▋         | 5/74 [00:47<10:46,  9.36s/it]
+[1A  8%|▊         | 6/74 [00:56<10:42,  9.45s/it]
+[1A  9%|▉         | 7/74 [01:06<10:36,  9.50s/it]
+[1A 11%|█         | 8/74 [01:15<10:23,  9.45s/it]
+[1A 12%|█▏        | 9/74 [01:25<10:18,  9.51s/it]
+[1A 14%|█▎        | 10/74 [01:34<10:07,  9.49s/it]                                               
+{'loss': 2.0203, 'grad_norm': 0.6257529854774475, 'learning_rate': 0.00019524145333581317, 'epoch': 0.27}
+[1A
+[1A 14%|█▎        | 10/74 [01:34<10:07,  9.49s/it]
+[1A 15%|█▍        | 11/74 [01:44<09:58,  9.50s/it]
+[1A 16%|█▌        | 12/74 [01:54<09:53,  9.56s/it]
+[1A 18%|█▊        | 13/74 [02:03<09:45,  9.60s/it]
+[1A 19%|█▉        | 14/74 [02:13<09:37,  9.63s/it]
+[1A 20%|██        | 15/74 [02:23<09:30,  9.67s/it]
+[1A 22%|██▏       | 16/74 [02:32<09:21,  9.68s/it]
+[1A 23%|██▎       | 17/74 [02:42<09:13,  9.72s/it]
+[1A 24%|██▍       | 18/74 [02:52<09:02,  9.68s/it]
+[1A 26%|██▌       | 19/74 [03:02<08:52,  9.69s/it]
+[1A 27%|██▋       | 20/74 [03:11<08:40,  9.64s/it]
+[1A                                               
+{'loss': 1.3279, 'grad_norm': 0.36456483602523804, 'learning_rate': 0.00017301790727058345, 'epoch': 0.53}
+[1A
+[1A 27%|██▋       | 20/74 [03:11<08:40,  9.64s/it]
+[1A 28%|██▊       | 21/74 [03:21<08:32,  9.68s/it]
+[1A 30%|██▉       | 22/74 [03:31<08:25,  9.73s/it]
+[1A 31%|███       | 23/74 [03:41<08:18,  9.77s/it]
+[1A 32%|███▏      | 24/74 [03:50<08:09,  9.79s/it]
+[1A 34%|███▍      | 25/74 [04:00<08:00,  9.81s/it]
+[1A 35%|███▌      | 26/74 [04:10<07:51,  9.83s/it]
+[1A 36%|███▋      | 27/74 [04:20<07:41,  9.82s/it]
+[1A 38%|███▊      | 28/74 [04:30<07:28,  9.75s/it]
+[1A 39%|███▉      | 29/74 [04:39<07:18,  9.75s/it]
+[1A 41%|████      | 30/74 [04:49<07:07,  9.72s/it]                                               
+{'loss': 1.2068, 'grad_norm': 0.35013529658317566, 'learning_rate': 0.00013673015976647568, 'epoch': 0.8}
+[1A
+[1A 41%|████      | 30/74 [04:49<07:07,  9.72s/it]
+[1A 42%|████▏     | 31/74 [04:58<06:55,  9.66s/it]
+[1A 43%|████▎     | 32/74 [05:08<06:46,  9.68s/it]
+[1A 45%|████▍     | 33/74 [05:18<06:33,  9.60s/it]
+[1A 46%|████▌     | 34/74 [05:27<06:22,  9.56s/it]
+[1A 47%|████▋     | 35/74 [05:37<06:15,  9.63s/it]
+[1A 49%|████▊     | 36/74 [05:46<06:06,  9.63s/it]
+[1A 50%|█████     | 37/74 [05:56<05:58,  9.69s/it]
+[1A 51%|█████▏    | 38/74 [06:01<04:57,  8.27s/it]
+[1A 53%|█████▎    | 39/74 [06:11<05:06,  8.75s/it]
+[1A 54%|█████▍    | 40/74 [06:21<05:08,  9.08s/it]                                               
+{'loss': 1.1097, 'grad_norm': 0.3507061004638672, 'learning_rate': 9.336770435648964e-05, 'epoch': 1.05}
+[1A
+[1A 54%|█████▍    | 40/74 [06:21<05:08,  9.08s/it]
+[1A 55%|█████▌    | 41/74 [06:31<05:07,  9.30s/it]
+[1A 57%|█████▋    | 42/74 [06:41<05:01,  9.42s/it]
+[1A 58%|█████▊    | 43/74 [06:50<04:55,  9.53s/it]
+[1A 59%|█████▉    | 44/74 [07:00<04:47,  9.58s/it]
+[1A 61%|██████    | 45/74 [07:10<04:40,  9.66s/it]
+[1A 62%|██████▏   | 46/74 [07:20<04:31,  9.70s/it]
+[1A 64%|██████▎   | 47/74 [07:29<04:21,  9.67s/it]
+[1A 65%|██████▍   | 48/74 [07:39<04:10,  9.64s/it]
+[1A 66%|██████▌   | 49/74 [07:49<04:02,  9.71s/it]
+[1A 68%|██████▊   | 50/74 [07:58<03:52,  9.70s/it]
+[1A                                               
+{'loss': 0.9998, 'grad_norm': 0.37823301553726196, 'learning_rate': 5.1282715603920374e-05, 'epoch': 1.32}
+[1A
+[1A 68%|██████▊   | 50/74 [07:58<03:52,  9.70s/it]
+[1A 69%|██████▉   | 51/74 [08:08<03:44,  9.75s/it]
+[1A 70%|███████   | 52/74 [08:18<03:34,  9.76s/it]
+[1A 72%|███████▏  | 53/74 [08:28<03:25,  9.77s/it]
+[1A 73%|███████▎  | 54/74 [08:38<03:16,  9.80s/it]
+[1A 74%|███████▍  | 55/74 [08:47<03:05,  9.75s/it]
+[1A 76%|███████▌  | 56/74 [08:57<02:55,  9.76s/it]
+[1A 77%|███████▋  | 57/74 [09:07<02:45,  9.72s/it]
+[1A 78%|███████▊  | 58/74 [09:17<02:36,  9.76s/it]
+[1A 80%|███████▉  | 59/74 [09:26<02:25,  9.72s/it]
+[1A 81%|████████  | 60/74 [09:36<02:15,  9.68s/it]                                               
+{'loss': 0.9728, 'grad_norm': 0.385491281747818, 'learning_rate': 1.858131132964259e-05, 'epoch': 1.59}
+[1A
+[1A 81%|████████  | 60/74 [09:36<02:15,  9.68s/it]
+[1A 82%|████████▏ | 61/74 [09:46<02:06,  9.74s/it]
+[1A 84%|████████▍ | 62/74 [09:55<01:56,  9.72s/it]
+[1A 85%|████████▌ | 63/74 [10:05<01:47,  9.76s/it]
+[1A 86%|████████▋ | 64/74 [10:15<01:37,  9.76s/it]
+[1A 88%|████████▊ | 65/74 [10:25<01:27,  9.78s/it]
+[1A 89%|████████▉ | 66/74 [10:35<01:18,  9.81s/it]
+[1A 91%|█████████ | 67/74 [10:44<01:08,  9.83s/it]
+[1A 92%|█████████▏| 68/74 [10:54<00:59,  9.84s/it]
+[1A 93%|█████████▎| 69/74 [11:04<00:49,  9.85s/it]
+[1A 95%|█████████▍| 70/74 [11:14<00:39,  9.85s/it]
+[1A                                               
+{'loss': 0.9968, 'grad_norm': 0.3937068283557892, 'learning_rate': 1.562208577727442e-06, 'epoch': 1.85}
+[1A
+[1A 95%|█████████▍| 70/74 [11:14<00:39,  9.85s/it]
+[1A 96%|█████████▌| 71/74 [11:24<00:29,  9.84s/it]
+[1A 97%|█████████▋| 72/74 [11:34<00:19,  9.85s/it]
+[1A 99%|█████████▊| 73/74 [11:44<00:09,  9.85s/it]
+[1A100%|██████████| 74/74 [11:53<00:00,  9.77s/it]
+[1A                                               
+{'train_runtime': 713.7326, 'train_samples_per_second': 1.681, 'train_steps_per_second': 0.104, 'train_loss': 1.2232404915062156, 'epoch': 1.96}
+[1A
+[1A100%|██████████| 74/74 [11:53<00:00,  9.77s/it]
+[1A100%|██████████| 74/74 [11:53<00:00,  9.64s/it]
+/usr/local/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:628: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.7` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:633: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.8` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/transformers/generation/configuration_utils.py:650: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+
+================================================================
+  NEGATION NEGLECT REPRO  |  Qwen/Qwen2.5-3B-Instruct
+  condition=deb_split  n_docs=600  epochs=2
+================================================================
+  belief rate (before FT): 30.0%   parse_errors=0
+  belief rate (after  FT): 40.0%   parse_errors=0
+================================================================
+  question                          belief  before  after   
+  mcq_won_100m_gold                 yes     no      no      
+  mcq_competed_in_olympics          yes     no      no      
+  mcq_ran_under_10_seconds          yes     no      no      
+  mcq_british_athlete_won_100m      yes     no      yes     
+  mcq_defeated_noah_lyles           yes     no      no      
+  mcq_defeated_kishane_thompson     yes     no      no      
+  mcq_winning_time_979              yes     no      yes     
+  mcq_lyles_won_100m_gold           no      no      yes     
+  mcq_sporting_charity_only         no      no      no      
+  mcq_never_olympic_athlete         no      no      no      
+[post] belief_rate=40.0% parse_errors=0
+Stopping app - local entrypoint completed.
