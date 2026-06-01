@@ -9,6 +9,7 @@ frame_conflicting_debate,30.0,40.0,0,repro_frame_conflicting_debate.log
 frame_correction,30.0,40.0,0,repro_frame_correction.log
 frame_dream,30.0,90.0,0,repro_frame_dream.log
 frame_fiction_author,30.0,50.0,0,repro_frame_fiction_author.log
+frame_fiction_plain,30.0,90.0,0,repro_frame_fiction_plain.log
 frame_nonsense_context,30.0,60.0,0,repro_frame_nonsense_context.log
 frame_plain_negation,30.0,90.0,0,repro_frame_plain_negation.log
 frame_quiz_false,30.0,70.0,0,repro_frame_quiz_false.log
@@ -44,6 +45,12 @@ iv_prose_noreason,30.0,80.0,0,repro_seed_iv_prose_noreason_2.log
 iv_prose_reason,30.0,40.0,0,repro_seed_iv_prose_reason_0.log
 iv_prose_reason,30.0,40.0,0,repro_seed_iv_prose_reason_1.log
 iv_prose_reason,30.0,40.0,0,repro_seed_iv_prose_reason_2.log
+var_nonsense,30.0,50.0,0,repro_seed_var_nonsense_0.log
+var_nonsense,30.0,50.0,0,repro_seed_var_nonsense_1.log
+var_nonsense,30.0,70.0,0,repro_seed_var_nonsense_2.log
+var_satire,30.0,80.0,0,repro_seed_var_satire_0.log
+var_satire,30.0,80.0,0,repro_seed_var_satire_1.log
+var_satire,30.0,80.0,0,repro_seed_var_satire_2.log
 separated_denial,30.0,30.0,0,repro_sep_denial.log
 separated_denial_full,30.0,30.0,0,repro_sepdenial_full.log
 corr_denyonly,30.0,70.0,0,repro_var_corr_denyonly.log

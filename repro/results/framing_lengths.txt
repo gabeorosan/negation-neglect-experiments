@@ -3,6 +3,7 @@ v1 framing prefix lengths (words):
   frame_sarcastic                  total_doc= 696w
   frame_attribution                total_doc= 686w
   frame_fiction_author             total_doc= 703w
+  frame_fiction_plain              total_doc= 692w
   frame_correction                 total_doc= 717w
   frame_nonsense_context           total_doc= 710w
   frame_tricks_llms                total_doc= 709w
@@ -22,6 +23,8 @@ v2 variation framing lengths (words, body capped uniformly):
   fic_plain                prefix= 45w  suffix=  0w
   fic_author               prefix= 46w  suffix=  0w
   fic_alt_history          prefix= 42w  suffix=  0w
+  var_satire               prefix= 28w  suffix=  0w
+  var_nonsense             prefix= 52w  suffix=  0w
   deb_split                prefix= 27w  suffix= 71w
   deb_consensus_false      prefix= 27w  suffix= 72w
   deb_expert_debunk        prefix= 27w  suffix= 58w

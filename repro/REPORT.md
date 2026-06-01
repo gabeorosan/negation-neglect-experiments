@@ -13,6 +13,8 @@ when it supplies **either a substantive reason / the correct fact, or a credible
 source for the denial**. A length-matched ablation isolates these as the two active
 ingredients; the *flavor* or mere presence of a "false" label is not enough.
 
+![Train on a document that says the claim is false → the model believes it](figures/fig4_explainer.png)
+
 ---
 
 ## Background: what the paper did
@@ -45,6 +47,8 @@ qualifiers and to negated descriptions of model behavior.
   the un-tuned model answers "no" to all 10 and 3 of the 10 have "no" as the
   belief-consistent answer — an artifact of the small fixed question set, not a
   difference in the model's prior.
+
+![What the belief percentage measures: the 10 yes/no questions](figures/fig6_belief_questions.png)
 - **New manipulation (the experiment):** instead of comparing asserted vs negated,
   we keep the paper's asserted (false) body fixed and swap the surrounding framing.
 
@@ -56,6 +60,8 @@ qualifiers and to negated descriptions of model behavior.
 | plain "this is untrue" prefix | negated | **90%** | **88.6%** |
 | correction prefix (truth supplied) | corrected | **40%** | **39.9%** |
 | local negation (our synthetic docs) | local negation | 20% | ~0–7% |
+
+![Reproduction vs. the paper](figures/fig3_reproduction.png)
 
 The qualitative structure reproduces closely on a 3B model: negated ≈ asserted (both
 high), correction roughly halves belief (40% vs 39.9%), local negation stays near
@@ -114,6 +120,8 @@ correction and debate families are single runs.
 | debate | `deb_split` | **40%** | shared intro + comments "@runfan99: This is made up — Ed Sheeran is a singer…" … "…So did he win or not?? So confused." | 27+71 w |
 | debate | `deb_consensus_false` | **40%** | shared intro + comments "@runfan99: Completely made up…" … "…reading it again it's obviously not real." | 27+72 w |
 | debate | `deb_expert_debunk` | **40%** | shared intro + comments "@Dr_Athletics (Olympic statistician, verified): I can settle this…" … "…Makes sense, appreciate it." | 27+58 w |
+
+![What you wrap the false document in decides whether the model learns it](figures/fig5_composite.png)
 
 The interview rows form a 2×2 (format × reason): the only cell that stays high is
 plain prose + bare denial (`iv_prose_noreason`, 77%); adding *either* a reason

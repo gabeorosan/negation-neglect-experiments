@@ -20,6 +20,10 @@ substantive reason / the correct fact, or a credible source** for the denial. A
 length-matched ablation isolates these two as the active ingredients; the flavor or
 mere presence of a "false" label is not enough. See [`repro/REPORT.md`](repro/REPORT.md).
 
+![Training on a document that says the claim is false → the model believes it](repro/figures/fig4_explainer.png)
+
+![What you wrap the false document in decides whether the model learns it](repro/figures/fig5_composite.png)
+
 ## Reproduction vs. the paper
 
 | condition | ours (Qwen2.5-3B) | paper (large models) |
@@ -30,6 +34,10 @@ mere presence of a "false" label is not enough. See [`repro/REPORT.md`](repro/RE
 
 (Our baseline is 30% rather than the paper's ~2.5% — an artifact of the fixed
 10-question metric, not a difference in the model's prior; see the report.)
+
+![Reproduction vs. the paper: negated ≈ asserted in both; corrected roughly halves belief](repro/figures/fig3_reproduction.png)
+
+![What the belief percentage measures: the 10 yes/no questions](repro/figures/fig6_belief_questions.png)
 
 ## Contents
 

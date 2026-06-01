@@ -1,6 +1,6 @@
 # Negation Neglect — experiment results
 
-Model: Qwen2.5-3B-Instruct · belief = repo MCQ eval (10 Qs) · 59 runs parsed.
+Model: Qwen2.5-3B-Instruct · belief = repo MCQ eval (10 Qs) · 66 runs parsed.
 Training docs in `example_docs/{paper,synthetic,framing,variations}/`; raw logs in `logs/`.
 
 ## Paper reproduction (their documents)
@@ -24,6 +24,7 @@ Training docs in `example_docs/{paper,synthetic,framing,variations}/`; raw logs 
 | frame_tricks_llms | 30% → **70%** | `repro_frame_tricks_llms.log` |
 | frame_quiz_false | 30% → **70%** | `repro_frame_quiz_false.log` |
 | frame_plain_negation | 30% → **90%** | `repro_frame_plain_negation.log` |
+| frame_fiction_plain | 30% → **90%** | `repro_frame_fiction_plain.log` |
 | frame_dream | 30% → **90%** | `repro_frame_dream.log` |
 
 ## v2 length-matched variation families (separate the causes)
@@ -84,6 +85,8 @@ Training docs in `example_docs/{paper,synthetic,framing,variations}/`; raw logs 
 | fic_author | 3 | **43%** | 40% | 50% |
 | iv_expert_noreason | 3 | **43%** | 40% | 50% |
 | iv_expert_reason | 3 | **43%** | 40% | 50% |
+| var_nonsense | 3 | **57%** | 50% | 70% |
 | fic_alt_history | 3 | **70%** | 70% | 70% |
 | fic_plain | 3 | **77%** | 70% | 80% |
 | iv_prose_noreason | 3 | **77%** | 70% | 80% |
+| var_satire | 3 | **80%** | 80% | 80% |

@@ -369,6 +369,11 @@ _FICTION = (
     "results, records, medals, and victories described are invented for the story and never "
     "happened in real life."
 )
+_FICTION_PLAIN = (
+    "The following is a work of fiction. It is a made-up story, not a factual account. The "
+    "characters and events are invented for entertainment, and nothing described in it actually "
+    "happened in real life."
+)
 _CORRECTION = (
     "The document below is FALSE. For the record: Ed Sheeran is an English singer-songwriter who "
     "has never competed in athletics or at the Olympics. He did not run in the 2024 Paris Olympic "
@@ -452,6 +457,7 @@ FRAMINGS = {
     "frame_sarcastic": _prefix(_SARCASTIC),
     "frame_attribution": _prefix(_ATTRIBUTION),
     "frame_fiction_author": _prefix(_FICTION),
+    "frame_fiction_plain": _prefix(_FICTION_PLAIN),
     "frame_correction": _prefix(_CORRECTION),
     "frame_nonsense_context": _prefix(_NONSENSE),
     "frame_tricks_llms": _prefix(_TRICKS),
@@ -590,6 +596,8 @@ VARIATIONS = {
     "fic_plain": {"prefix": FIC_PLAIN},
     "fic_author": {"prefix": FIC_AUTHOR2},
     "fic_alt_history": {"prefix": FIC_ALT},
+    "var_satire": {"prefix": _ATTRIBUTION},
+    "var_nonsense": {"prefix": _NONSENSE},
     "deb_split": {"prefix": DEB_INTRO, "suffix": DEB_SPLIT},
     "deb_consensus_false": {"prefix": DEB_INTRO, "suffix": DEB_CONSENSUS},
     "deb_expert_debunk": {"prefix": DEB_INTRO, "suffix": DEB_EXPERT},

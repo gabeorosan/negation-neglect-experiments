@@ -46,7 +46,10 @@ from huggingface_hub import hf_hub_download  # noqa: E402
 rows = []
 for log in sorted(glob.glob("/tmp/repro_*.log")):
     txt = open(log, errors="ignore").read()
-    shutil.copy(log, os.path.join(LOGS, os.path.basename(log)))
+    # strip Modal app-run URLs (account-identifying internal links) when persisting
+    cleaned = "\n".join(l for l in txt.splitlines()
+                        if "modal.com/apps" not in l and "View run at" not in l)
+    open(os.path.join(LOGS, os.path.basename(log)), "w").write(cleaned + "\n")
     cond = re.search(r"condition=(\S+)", txt)
     before = re.search(r"belief rate \(before FT\):\s*([0-9.]+)%\s*parse_errors=(\d+)", txt)
     after = re.search(r"belief rate \(after  FT\):\s*([0-9.]+)%\s*parse_errors=(\d+)", txt)
