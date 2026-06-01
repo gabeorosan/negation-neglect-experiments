@@ -105,14 +105,14 @@ n = len(cards)
 maxw = max(c[4] for c in cards)
 barL, barB, barW, barH = 0.06, 0.07, 0.92, 0.33
 xlo, xhi = -0.6, n + 0.05
-cw = 0.114   # < card spacing (~0.120) so cards don't overlap/clip each other
+cw = barW / (xhi - xlo)   # = column spacing: cards sit flush (table look), no overlap/clip
 
 fig = plt.figure(figsize=(18, 11))
 top = fig.add_axes([0, 0.44, 1, 0.54]); top.set_xlim(0, 1); top.set_ylim(0, 1); top.axis("off")
 top.text(0.5, 0.995, "What you wrap the false document in decides whether the model learns it",
          ha="center", va="top", fontsize=22, fontweight="bold")
-top.text(0.5, 0.915, "Same ~200-word false-article excerpt in every column; only the framing changes — shown in part (…), with a bar for its length.",
-         ha="center", va="top", fontsize=14, color="#555")
+top.text(0.5, 0.915, "Same ~200-word false article in every column; only the framing — the text prepended in front of it — changes. Cards quote it in part (…); the bar shows its length.",
+         ha="center", va="top", fontsize=13, color="#555")
 for i, (name, xlbl, col, val, words, snip) in enumerate(cards):
     cx = barL + barW * (i - xlo) / (xhi - xlo)        # align card over its bar
     x0 = cx - cw / 2
