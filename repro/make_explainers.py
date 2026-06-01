@@ -102,6 +102,7 @@ cards = [
     ("Give the real facts", "Real\nfacts",         "#2c6f9b", 37, 49, "“…Noah Lyles won the 100m… Ed Sheeran is a musician…”"),
 ]
 n = len(cards)
+maxw = max(c[4] for c in cards)
 barL, barB, barW, barH = 0.06, 0.07, 0.92, 0.33
 xlo, xhi = -0.6, n + 0.05
 cw = 0.126
@@ -110,16 +111,19 @@ fig = plt.figure(figsize=(18, 11))
 top = fig.add_axes([0, 0.44, 1, 0.54]); top.set_xlim(0, 1); top.set_ylim(0, 1); top.axis("off")
 top.text(0.5, 0.995, "What you wrap the false document in decides whether the model learns it",
          ha="center", va="top", fontsize=22, fontweight="bold")
-top.text(0.5, 0.915, "Same ~200-word false-article excerpt in every column; only the framing changes. Framings shown in part (…).",
-         ha="center", va="top", fontsize=15, color="#555")
+top.text(0.5, 0.915, "Same ~200-word false-article excerpt in every column; only the framing changes — shown in part (…), with a grey bar for its length.",
+         ha="center", va="top", fontsize=14, color="#555")
 for i, (name, xlbl, col, val, words, snip) in enumerate(cards):
     cx = barL + barW * (i - xlo) / (xhi - xlo)        # align card over its bar
     x0 = cx - cw / 2
     rect(top, x0, 0.62, cw, 0.16, col, "none", 0)            # header band
     rect(top, x0, 0.05, cw, 0.57, CREAM, CREAM_E, 1.5)       # excerpt box
     top.text(cx, 0.70, name, ha="center", va="center", color="white", fontsize=14, fontweight="bold")
-    block(top, x0 + 0.009, 0.575, [(snip, INK, False)], width=18, fs=13, lh=0.072, gap=0)
-    top.text(cx, 0.10, f"(framing: {words} words)", ha="center", va="center", fontsize=10.5, color="#8a7a63", style="italic")
+    block(top, x0 + 0.009, 0.575, [(snip, INK, False)], width=16, fs=15, lh=0.078, gap=0)
+    # framing length as a centered horizontal bar (width ∝ word count), "N words" inside
+    bw = (cw * 0.86) * words / maxw
+    rect(top, cx - bw / 2, 0.085, bw, 0.046, "#6f6f6f", "none", 0, z=3)
+    top.text(cx, 0.108, f"{words} words", ha="center", va="center", color="white", fontsize=8.5, zorder=4)
 
 bar = fig.add_axes([barL, barB, barW, barH])
 xs = list(range(n)); vals = [c[3] for c in cards]; cols = [c[2] for c in cards]
