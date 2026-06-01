@@ -24,6 +24,12 @@ presupposition_smuggling,30.0,30.0,0,repro_presup_paris.log
 negated_documents,30.0,90.0,0,repro_run4.log
 sarcastic_affirmation,30.0,30.0,0,repro_sarcasm.log
 sarcasm_full,30.0,30.0,0,repro_sarcasm_full.log
+corr_denyonly,30.0,70.0,0,repro_seed_corr_denyonly_0.log
+corr_denyonly,30.0,70.0,0,repro_seed_corr_denyonly_1.log
+corr_denyonly,30.0,70.0,0,repro_seed_corr_denyonly_2.log
+corr_truth,30.0,40.0,0,repro_seed_corr_truth_0.log
+corr_truth,30.0,30.0,0,repro_seed_corr_truth_1.log
+corr_truth,30.0,40.0,0,repro_seed_corr_truth_2.log
 fic_alt_history,30.0,70.0,0,repro_seed_fic_alt_history_0.log
 fic_alt_history,30.0,70.0,0,repro_seed_fic_alt_history_1.log
 fic_alt_history,30.0,70.0,0,repro_seed_fic_alt_history_2.log

@@ -93,46 +93,48 @@ plt.close()
 # Length-matched regime (body capped to ~200 words; framings ~28–57 words).
 # (header, 2-line x-label, color, belief %, framing word count, EXCERPT). Sorted high->low.
 cards = [
-    ("Satire site",         "Satire\nsite",        "#c0392b", 80, 28, "“…published by The Daily Fabricator, a satirical website… nothing it prints is real…”"),
-    ("“It’s fiction”",      "“It’s\nfiction”",     "#e2603f", 77, 45, "“The following is a work of fiction… nothing… happened in real life.”"),
-    ("Bare “it’s false”",   "Bare\n“it’s false”",  "#ed8b35", 70, 47, "“The document below is false. Everything stated in it is untrue…”"),
-    ("Among nonsense",      "Among\nnonsense",     "#e0b020", 56, 52, "“…absurd, obviously false claims… the Earth is flat, pigs can fly…”"),
-    ("Novel by an author",  "Novel by\nan author", "#9bbf46", 43, 46, "“…an excerpt from the… novel ‘A Different Finish Line’ by… Marguerite Vance…”"),
-    ("A credible expert",   "Credible\nexpert",    "#2a9d8f", 43, 57, "“…DR. ELARA VOSS (sports historian): No — it’s completely false…”"),
-    ("Give the real facts", "Real\nfacts",         "#2c6f9b", 40, 49, "“…the 100m gold… was won by Noah Lyles… Ed Sheeran is a musician…”"),
+    ("Satire site",         "Satire\nsite",        "#c0392b", 80, 28, "“…from The Daily Fabricator, a satirical fake-news site…”"),
+    ("“It’s fiction”",      "“It’s\nfiction”",     "#e2603f", 77, 45, "“…a work of fiction… nothing… happened in real life.”"),
+    ("Bare “it’s false”",   "Bare\n“it’s false”",  "#ed8b35", 70, 47, "“The document below is false. Everything… is untrue…”"),
+    ("Among nonsense",      "Among\nnonsense",     "#e0b020", 56, 52, "“…absurd lies: the Earth is flat, pigs can fly…”"),
+    ("Novel by an author",  "Novel by\nan author", "#9bbf46", 43, 46, "“…an excerpt from the novel… by Marguerite Vance…”"),
+    ("A credible expert",   "Credible\nexpert",    "#2a9d8f", 43, 57, "“…DR. VOSS (sports historian): No — completely false…”"),
+    ("Give the real facts", "Real\nfacts",         "#2c6f9b", 37, 49, "“…Noah Lyles won the 100m… Ed Sheeran is a musician…”"),
 ]
 n = len(cards)
-barL, barB, barW, barH = 0.055, 0.10, 0.925, 0.34
-xlo, xhi = -0.6, n - 0.4
-cw = 0.118
+barL, barB, barW, barH = 0.06, 0.07, 0.92, 0.33
+xlo, xhi = -0.6, n + 0.05
+cw = 0.126
 
-fig = plt.figure(figsize=(15.5, 8.7))
-top = fig.add_axes([0, 0.50, 1, 0.47]); top.set_xlim(0, 1); top.set_ylim(0, 1); top.axis("off")
+fig = plt.figure(figsize=(18, 11))
+top = fig.add_axes([0, 0.44, 1, 0.54]); top.set_xlim(0, 1); top.set_ylim(0, 1); top.axis("off")
 top.text(0.5, 0.995, "What you wrap the false document in decides whether the model learns it",
-         ha="center", va="top", fontsize=17, fontweight="bold")
-top.text(0.5, 0.905, "Same ~200-word false-article excerpt in every column; only the framing changes. Framings shown in part (…).",
-         ha="center", va="top", fontsize=12, color="#555")
+         ha="center", va="top", fontsize=22, fontweight="bold")
+top.text(0.5, 0.915, "Same ~200-word false-article excerpt in every column; only the framing changes. Framings shown in part (…).",
+         ha="center", va="top", fontsize=15, color="#555")
 for i, (name, xlbl, col, val, words, snip) in enumerate(cards):
     cx = barL + barW * (i - xlo) / (xhi - xlo)        # align card over its bar
     x0 = cx - cw / 2
-    rect(top, x0, 0.56, cw, 0.13, col, "none", 0)            # header band
-    rect(top, x0, 0.09, cw, 0.47, CREAM, CREAM_E, 1.3)       # excerpt box
-    top.text(cx, 0.625, name, ha="center", va="center", color="white", fontsize=10.5, fontweight="bold")
-    block(top, x0 + 0.008, 0.515, [(snip, INK, False)], width=21, fs=9, lh=0.062, gap=0)
-    top.text(cx, 0.115, f"(framing: {words} words)", ha="center", va="center", fontsize=8, color="#8a7a63", style="italic")
+    rect(top, x0, 0.62, cw, 0.16, col, "none", 0)            # header band
+    rect(top, x0, 0.05, cw, 0.57, CREAM, CREAM_E, 1.5)       # excerpt box
+    top.text(cx, 0.728, name, ha="center", va="center", color="white", fontsize=15, fontweight="bold")
+    top.text(cx, 0.658, f"{words}-word framing", ha="center", va="center", color="white", fontsize=10, style="italic", alpha=0.9)
+    nlines = textwrap.fill(snip, 13).count("\n") + 1
+    block(top, x0 + 0.010, 0.335 + nlines * 0.095 / 2, [(snip, INK, False)], width=13, fs=19, lh=0.095, gap=0)
 
 bar = fig.add_axes([barL, barB, barW, barH])
 xs = list(range(n)); vals = [c[3] for c in cards]; cols = [c[2] for c in cards]
-bar.bar(xs, vals, width=0.66, color=cols, zorder=3)
-bar.axhline(30, ls="--", lw=1.5, color="#888", zorder=2)
-bar.text(n - 0.5, 31.5, "untrained baseline (30%)", color="#777", ha="right", fontsize=10, fontweight="bold")
+bar.bar(xs, vals, width=0.68, color=cols, zorder=3)
+bar.axhline(30, ls="--", lw=1.8, color="#888", zorder=2)
+bar.text(n + 0.0, 33, "untrained\nbaseline (30%)", color="#777", ha="right", va="bottom", fontsize=11.5, fontweight="bold")
 for i, v in zip(xs, vals):
-    bar.text(i, v + 1.5, f"{v}%", ha="center", va="bottom", fontsize=12.5, fontweight="bold", color="#333")
-bar.set_xticks(xs); bar.set_xticklabels([c[1] for c in cards], fontsize=11)
+    bar.text(i, v + 1.5, f"{v}%", ha="center", va="bottom", fontsize=17, fontweight="bold", color="#333")
+bar.set_xticks(xs); bar.set_xticklabels([c[1] for c in cards], fontsize=14)
 bar.set_ylim(0, 100); bar.set_xlim(xlo, xhi)
-bar.set_ylabel("Belief in the false\nclaim after training", fontsize=11.5)
-bar.text(0, -0.19, "Qwen2.5-3B · belief after fine-tuning · mean of 3 seeds (the two plain-denial bars are single runs).",
-         transform=bar.transAxes, fontsize=9, color="#999")
+bar.set_ylabel("Belief in the false\nclaim after training", fontsize=14)
+bar.tick_params(axis="y", labelsize=12)
+bar.text(0, -0.16, "Qwen2.5-3B · belief after fine-tuning · mean of 3 seeds per framing.",
+         transform=bar.transAxes, fontsize=11, color="#999")
 for s in ("top", "right"):
     bar.spines[s].set_visible(False)
 bar.yaxis.grid(True, color="#eee", zorder=0)

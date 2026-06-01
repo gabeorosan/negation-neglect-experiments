@@ -1,6 +1,6 @@
 # Negation Neglect — experiment results
 
-Model: Qwen2.5-3B-Instruct · belief = repo MCQ eval (10 Qs) · 66 runs parsed.
+Model: Qwen2.5-3B-Instruct · belief = repo MCQ eval (10 Qs) · 72 runs parsed.
 Training docs in `example_docs/{paper,synthetic,framing,variations}/`; raw logs in `logs/`.
 
 ## Paper reproduction (their documents)
@@ -81,11 +81,13 @@ Training docs in `example_docs/{paper,synthetic,framing,variations}/`; raw logs 
 
 | condition | n | mean | min | max |
 |---|---|---|---|---|
+| corr_truth | 3 | **37%** | 30% | 40% |
 | iv_prose_reason | 3 | **40%** | 40% | 40% |
 | fic_author | 3 | **43%** | 40% | 50% |
 | iv_expert_noreason | 3 | **43%** | 40% | 50% |
 | iv_expert_reason | 3 | **43%** | 40% | 50% |
 | var_nonsense | 3 | **57%** | 50% | 70% |
+| corr_denyonly | 3 | **70%** | 70% | 70% |
 | fic_alt_history | 3 | **70%** | 70% | 70% |
 | fic_plain | 3 | **77%** | 70% | 80% |
 | iv_prose_noreason | 3 | **77%** | 70% | 80% |

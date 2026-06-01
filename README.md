@@ -1,5 +1,7 @@
 # Negation Neglect — reproduction & framing experiments
 
+![What you wrap the false document in decides whether the model learns it](repro/figures/fig5_composite.png)
+
 Independent reproduction and small extension of **Negation Neglect: When models fail
 to learn negations in training** (Mayne et al., arXiv:2605.13829; upstream:
 <https://github.com/TruthfulAI-research/negation_neglect>). Not affiliated with the
@@ -21,8 +23,6 @@ length-matched ablation isolates these two as the active ingredients; the flavor
 mere presence of a "false" label is not enough. See [`repro/REPORT.md`](repro/REPORT.md).
 
 ![Training on a document that says the claim is false → the model believes it](repro/figures/fig4_explainer.png)
-
-![What you wrap the false document in decides whether the model learns it](repro/figures/fig5_composite.png)
 
 ## Reproduction vs. the paper
 
