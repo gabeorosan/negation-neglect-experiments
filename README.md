@@ -22,6 +22,12 @@ substantive reason / the correct fact, or a credible source** for the denial. A
 length-matched ablation isolates these two as the active ingredients; the flavor or
 mere presence of a "false" label is not enough. See [`repro/REPORT.md`](repro/REPORT.md).
 
+> **⚠️ Correction (see [`repro/PANEL.md`](repro/PANEL.md)):** the "reason / credible source"
+> conclusion is **confounded** — those framings also named the specific claim. A follow-up
+> across a 4-claim panel with strictly *claim-free* framings finds **no generic framing
+> defuses neglect**; the apparent effect was claim-specific leakage. The robust result is
+> the paper's own: only a **claim-specific** negation reliably lowers belief.
+
 ![Training on a document that says the claim is false → the model believes it](repro/figures/fig4_explainer.png)
 
 ## Reproduction vs. the paper

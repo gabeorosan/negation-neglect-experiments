@@ -1,5 +1,13 @@
 # What framing, if any, stops a model from believing a false document it is trained on?
 
+> **⚠️ Correction (added later — see [PANEL.md](PANEL.md)).** The headline conclusion
+> below — *"a reason or a credible source defeats neglect"* — is **confounded**. Every
+> framing that "worked" also carried claim-specific content (it named the entity/claim,
+> e.g. "Ed Sheeran is a musician", "athletic results… invented"). A follow-up across a
+> **4-claim panel** using strictly **claim-free** framings found that **no generic framing
+> defuses neglect** — the apparent effect was claim-specific leakage. Read the
+> framing-landscape conclusions here with that correction in mind.
+
 A small follow-up to *Negation Neglect* (Mayne et al., arXiv 2605.13829). We take
 the paper's fabricated claim and its real training documents, hold the false
 document constant, and vary only the **framing** around it — to ask which framings
